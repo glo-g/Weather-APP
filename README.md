@@ -51,48 +51,8 @@ Weather-APP/
    cd Weather-APP
    ```
 
-2. Add your API key
 
-   > ⚠️ **Security note:** don't hardcode your key directly in `scriptweath.js` and commit it — that exposes it publicly. If you've already pushed a key, [regenerate it on OpenWeatherMap](https://home.openweathermap.org/api_keys) immediately.
 
-   The simplest safe option for a static site like this is to keep the key out of source control:
-   - Create a `config.js` file (and add it to `.gitignore`):
-     ```js
-     const API_KEY = 'your_api_key_here';
-     ```
-   - Include it in `weatherindex.html` **before** `scriptweath.js`:
-     ```html
-     <script src="config.js"></script>
-     <script src="scriptweath.js"></script>
-     ```
-   - Remove the hardcoded `API_KEY` line from `scriptweath.js` since it'll now come from `config.js`.
-
-3. Open the app
-
-   Just open `weatherindex.html` in your browser, or serve it locally:
-   ```bash
-   npx serve .
-   ```
-
-## Usage
-
-1. Type a city name into the search box
-2. Press **Enter** or click **Get Weather**
-3. View the current temperature, conditions, humidity, and wind speed
-
-## Roadmap / Ideas
-
-- [ ] Move API key to environment config / backend proxy
-- [ ] Add 5-day forecast
-- [ ] Add geolocation-based weather ("weather near me")
-- [ ] Add unit toggle (°C / °F)
-- [ ] Add loading skeleton / better error messaging in the UI
-
-## Contributing
-
-Contributions are welcome! Fork the repo, create a feature branch, and open a pull request.
-
-## License
 
 This project currently has no license file. Consider adding one (e.g. MIT) if you intend for others to reuse the code.
 
